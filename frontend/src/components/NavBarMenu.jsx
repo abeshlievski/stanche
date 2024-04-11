@@ -5,7 +5,9 @@ export default function NavBarMenu({ name, adress }) {
   return (
     <span id="navbar-link">
       <li>
-        <Link to={adress}>{name}</Link>
+        <Link to={adress} className="link-to">
+          {name}
+        </Link>
       </li>
     </span>
   );

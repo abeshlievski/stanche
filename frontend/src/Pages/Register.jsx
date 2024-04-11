@@ -1,6 +1,6 @@
 import "../components/Register.css";
 import { useState } from "react";
-import buildingsImg from "../assets/buildings.jpg";
+import buildingsImg from "../assets/buildings2.jpg";
 import { useSignup } from "../hooks/useSignup";
 export default function Register() {
   const [dob, setDob] = useState("2000-01-01");
@@ -41,6 +41,7 @@ export default function Register() {
             <label htmlFor="name">
               <h5>Име</h5>
             </label>
+            <br />
             <input
               type="text"
               value={name}
@@ -53,6 +54,7 @@ export default function Register() {
             <label htmlFor="email">
               <h5>Презиме</h5>
             </label>
+            <br />
             <input
               type="text"
               value={surname}
@@ -66,6 +68,7 @@ export default function Register() {
             <label htmlFor="email">
               <h5>Е-маил адреса</h5>
             </label>
+            <br />
             <input
               type="email"
               value={email}
@@ -78,6 +81,7 @@ export default function Register() {
             <label htmlFor="password">
               <h5>Лозинка</h5>
             </label>
+            <br />
             <input
               type="password"
               value={password}
@@ -90,6 +94,7 @@ export default function Register() {
             <label htmlFor="dob">
               <h5>Година на раѓање</h5>
             </label>
+            <br />
             <input
               type="date"
               value={dob}
@@ -102,6 +107,7 @@ export default function Register() {
           </div>
           <div>
             <h5>Пол</h5>
+
             <div id="register-gender">
               <input
                 type="radio"
@@ -120,11 +126,18 @@ export default function Register() {
             </div>
           </div>
           <div>
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="submit-form"
-            ></button>
+            <label htmlFor="type">
+              <h5>Јас сум:</h5>
+            </label>
+            <select onChange={(e) => setRole(e.target.value)} className="role">
+              <option value="student">Студент</option>
+              <option value="izdavac">Издавач</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit" disabled={isLoading} className="submit-form">
+              Продолжи
+            </button>
           </div>
           {error && <div className="error">{error}</div>}
         </form>

@@ -1,11 +1,10 @@
 import "./Features.css";
 
-export default function FeaturesCards({ image, title, desc }) {
+export default function FeaturesCards({ image, title }) {
   return (
     <div id="feature-card">
       <img src={image} alt="" />
-      <h3>{title}</h3>
-      <p>{desc}</p>
+      <h5>{title}</h5>
     </div>
   );
 }

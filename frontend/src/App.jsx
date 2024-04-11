@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdsPage from "./Pages/AdsPage";
-
+import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import LandingPage from "./Pages/LandingPage";
 import LogIn from "./Pages/LogIn";
@@ -19,6 +19,7 @@ function App() {
             <Route path="/register" element={<Register />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );
