@@ -8,7 +8,10 @@ const {
   deleteAd,
   updateAd,
 } = require("../controllers/adController");
+const requireAuth = require("../middleware/requireAuth");
+
 const router = express.Router();
+router.use(requireAuth);
 
 router.get("/", getAds); // get all ads
 router.get("/:id", getAd); // get single ad

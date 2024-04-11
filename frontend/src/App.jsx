@@ -15,6 +15,8 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/ads" element={<AdsPage />} />
+            <Route path="/login" element={<LogIn />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </div>
       </BrowserRouter>

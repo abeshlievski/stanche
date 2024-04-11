@@ -1,8 +1,12 @@
 import "./NavBar.css";
-export default function NavBarMenu({ name }) {
+import { Link } from "react-router-dom";
+
+export default function NavBarMenu({ name, adress }) {
   return (
     <span id="navbar-link">
-      <li>{name}</li>
+      <li>
+        <Link to={adress}>{name}</Link>
+      </li>
     </span>
   );
 }

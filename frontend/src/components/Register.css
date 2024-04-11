@@ -28,23 +28,21 @@
 }
 #register form {
   padding: 5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 #register input {
-  width: 400px;
+  width: 300px;
   height: 50px;
   padding: 10px;
 }
 .submit-form {
   background-color: #146c94;
   color: #f6f1f1;
-  border: 0;
-  border-radius: 5%;
-  font-weight: 500;
+  height: 10rem;
+  width: 10rem;
 }
 .submit-form:hover {
   background-color: transparent;
@@ -53,7 +51,16 @@
 }
 .name-surname {
   display: flex;
+  flex-direction: column;
 }
-.name-surname input {
+.name-surname div {
   width: 300px;
+}
+
+#register-gender {
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
