@@ -1,0 +1,24 @@
+#features {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-image: url("../assets/features-bg.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+#features-cards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  flex-wrap: wrap;
+}
+#feature-card {
+  padding: 1em;
+  /* border: 1px solid black; */
+  background-color: #19a7ce;
+  border-radius: 5%;
+}
