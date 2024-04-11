@@ -6,17 +6,11 @@ export default function Header() {
       <div id="header-text">
         <div>
           <h1>
-            Пронајдете го вашето идеално станче, за поминување на вашите
-            студентски денови.
+            Пронајдете го вашето идеално <span>станче</span>, за испишување на
+            вашите најубави <span> студентски</span> приказни.
           </h1>
         </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
-            odio earum aspernatur odit exercitationem eaque modi inventore
-            itaque? Veritatis, quae.
-          </p>
-        </div>
+        <div></div>
       </div>
       <div id="header-img">
         <img src={headerImg} alt="" />

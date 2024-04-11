@@ -1,7 +1,7 @@
 import "../components/LogIn.css";
 import { useState } from "react";
 import { useLogin } from "../hooks/useLogin";
-import mapImg from "../assets/map.png";
+import { Link } from "react-router-dom";
 import buildingsImg from "../assets/buildings.jpg";
 export default function LogIn() {
   const [email, setEmail] = useState("");
@@ -45,14 +45,14 @@ export default function LogIn() {
             />
           </div>
           <div>
-            <button type="submit" disabled={isLoading}>
+            <button type="submit" disabled={isLoading} className="submit-form">
               Продолжи
             </button>
             {error && <div className="error">{error}</div>}
           </div>
         </form>
         <p>
-          Немате акаунт? <span>Регистрација</span>
+          Немате акаунт? <Link to={"/register"}>Регистрација</Link>
         </p>
       </div>
     </section>

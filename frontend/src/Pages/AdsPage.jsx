@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import { useAdsContext } from "../hooks/useAdsContext";
+import { Link } from "react-router-dom";
+
+import "../components/Ads.css";
 import AdDetails from "../components/AdDetails";
 const AdsPage = () => {
   const { ads, dispatch } = useAdsContext();
@@ -17,11 +20,19 @@ const AdsPage = () => {
   }, [dispatch]);
 
   return (
-    <div className="home">
-      <div className="ads">
-        1{ads && ads.map((ad) => <AdDetails ad={ad} key={ad._id} />)}
+    <section id="ads-page">
+      <div id="filter">
+        <button id="create-ad-btn">Барај цимер</button>
       </div>
-    </div>
+      <div id="create-ads">
+        <button id="create-ad-btn">
+          <Link to={"/register"}>Нов Оглас</Link>
+        </button>
+      </div>
+      <div id="display-ads">
+        {ads && ads.map((ad) => <AdDetails ad={ad} key={ad._id} />)}
+      </div>
+    </section>
   );
 };
 

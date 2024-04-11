@@ -39,15 +39,67 @@
   height: 50px;
   padding: 10px;
 }
-.submit-form {
-  background-color: #146c94;
-  color: #f6f1f1;
-  border: 0;
-  border-radius: 5%;
-  font-weight: 500;
+
+@media only screen and (max-width: 330px) {
+  #log-in-page {
+    grid-template-columns: 1fr;
+  }
+  #login-heading {
+    display: none;
+  }
+  #log-in form {
+    padding: 5rem 0;
+  }
+  #log-in input {
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+  }
 }
-.submit-form:hover {
-  background-color: transparent;
-  color: #146c94;
-  border: 2px solid #146c94;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 331px) and (max-width: 600px) {
+  #log-in-page {
+    grid-template-columns: 1fr;
+  }
+  #login-heading {
+    display: none;
+  }
+  #log-in form {
+    padding: 5rem 0;
+  }
+  #log-in input {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  #log-in-page {
+    grid-template-columns: 1fr;
+  }
+  #login-heading {
+    display: none;
+  }
+  #log-in form {
+    padding: 5em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #log-in-page {
+    grid-template-columns: 2fr 1fr;
+  }
+  #log-in form {
+    padding: 5em 2em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #log-in-page {
+    grid-template-columns: 2fr 1fr;
+  }
 }

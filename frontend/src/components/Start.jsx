@@ -1,13 +1,18 @@
 import "./Start.css";
+import { Link } from "react-router-dom";
 
 export default function Start() {
   return (
     <section id="start">
       <div id="call-to-action">
         <div>
-          <h1>Спремни?</h1>
+          <h1>Подготвени да започнете со барање?</h1>
         </div>
-        <p>Пронајде те го вашиот стан</p>
+        <button>
+          <Link to={"/ads"} className="link-to">
+            Истражи
+          </Link>
+        </button>
       </div>
     </section>
   );

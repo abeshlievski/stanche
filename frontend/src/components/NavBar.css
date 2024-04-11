@@ -1,14 +1,13 @@
 #nav-bar {
   width: 100%;
-  height: 10vh;
+  height: 11vh;
   background-color: #146c94;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-around; */
   display: grid;
-  grid-template-columns: 6fr 1fr 5fr 1fr;
+  grid-template-columns: 1fr 5fr;
   font-size: 20px;
   color: #f6f1f1;
+  padding: 0 5rem;
+  /* margin-right: 30px; */
 }
 #nav-bar ul {
   display: flex;
@@ -19,6 +18,7 @@
 #navbar-menu {
   display: flex;
   align-items: center;
+  justify-content: end;
 }
 #navbar-link {
   background-color: transparent;
@@ -28,13 +28,58 @@
 #nav-bar button:hover {
   color: #f6f1f1aa;
 }
-#navbar-login {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
+
 #navbar-logo {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#navbar-logo img {
+  width: 140px;
+  height: 60px;
+}
+.link-to {
+  color: #f6f1f1;
+  text-decoration: none;
+}
+.link-to:hover {
+  color: #f6f1f1c9;
+}
+#logout-btn {
+  background-color: transparent;
+  color: #f6f1f1;
+  border: 1px solid #f6f1f1;
+  border-radius: 10%;
+}
+#logout-btn:hover {
+  background-color: #f6f1f1bc;
+}
+#logged-in {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+@media only screen and (max-width: 415px) {
+  #nav-user-name {
+    display: none;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 660px) {
+  #nav-bar {
+    height: auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    font-size: 16px;
+    padding: 0;
+  }
+  #navbar-menu {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  #nav-bar {
+    padding: 0 1rem;
+  }
 }
