@@ -1,4 +1,5 @@
 import "./NavBar.css";
+import logoImg from "../assets/logo-navbar.png";
 import NavBarMenu from "./NavBarMenu";
 import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
@@ -12,30 +13,28 @@ export default function NavBar() {
   };
   return (
     <section id="nav-bar">
+      <div id="navbar-logo">
+        <img src={logoImg} alt="" />
+      </div>
       <div id="navbar-menu">
         <ul>
           <NavBarMenu name="Дома" adress="/" />
           <NavBarMenu name="Услуги" adress="/ads" />
-        </ul>
-      </div>
-      <div id="navbar-logo">
-        <h1>Станче</h1>
-      </div>
-      <div id="navbar-login">
-        <ul>
+
           {user && (
-            <div>
-              <span>{user.email}</span>
-              <button onClick={handleClick}>Одјави се</button>
+            <div id="logged-in">
+              <span id="nav-user-name">{user.email}</span>
+              <button onClick={handleClick} id="logout-btn">
+                Одјави се
+              </button>
             </div>
           )}
+          {!user && (
+            <>
+              <NavBarMenu name="Најава" adress="/login" />
+            </>
+          )}
         </ul>
-        {!user && (
-          <ul>
-            <NavBarMenu name="Најава" adress="/login" />
-            <NavBarMenu name="Регистрација" adress="/register" />
-          </ul>
-        )}
       </div>
     </section>
   );

@@ -1,0 +1,99 @@
+#steps {
+  width: 100%;
+  height: auto;
+  display: grid;
+  padding: 5rem;
+  grid-template-columns: 1fr 1fr;
+}
+#steps-img {
+  display: flex;
+  justify-content: end;
+}
+#steps-img img {
+  width: 700px;
+  height: 500px;
+}
+#steps-text {
+  ol {
+    list-style: none;
+    counter-reset: item;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  li {
+    counter-increment: item;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  li:before {
+    margin-right: 10px;
+    content: counter(item);
+    background: #146c94;
+    border-radius: 100%;
+    color: white;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #steps-img img {
+    display: none;
+  }
+  #steps-text {
+    ol {
+      gap: 1em;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    li:before {
+      width: 2em;
+      height: 2em;
+    }
+  }
+  #steps {
+    padding: 3rem 1rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  #steps-img img {
+    width: 300px;
+    height: 200px;
+  }
+  #steps-text {
+    ol {
+      gap: 0.5em;
+    }
+    li:before {
+      width: 2em;
+      height: 2em;
+    }
+  }
+  #steps {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #steps-img img {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #steps-img img {
+    width: 500px;
+    height: 400px;
+  }
+}
