@@ -1,0 +1,13 @@
+#ads-page {
+  min-height: 90vh;
+  max-height: auto;
+  padding: 2rem 20rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr;
+}
+#ad {
+  width: 200px;
+  height: 300px;
+  background-color: red;
+}
