@@ -1,0 +1,20 @@
+#features {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#features-cards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+#feature-card {
+  padding: 1em;
+  /* border: 1px solid black; */
+  background-color: #19a7ce;
+  border-radius: 5%;
+}
