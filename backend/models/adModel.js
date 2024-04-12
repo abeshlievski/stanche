@@ -12,20 +12,42 @@ const adSchema = new Schema(
       type: String,
       required: true,
     },
+    address: {
+      type: String,
+      required: true,
+    },
     description: {
       type: String,
       required: true,
     },
-    price: {
-      type: Number,
+    cube: {
+      type: String,
       required: true,
     },
-    size: {
-      type: Number,
+    price: {
+      type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: true,
+    },
+    quantity: {
+      type: String,
       required: true,
     },
     user_id: {
       type: String,
+      required: true,
+    },
+    createdBy: {
+      type: String,
+      required: true,
+    },
+    img: {
+      type: String,
+      default:
+        "https://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png",
       required: true,
     },
   },

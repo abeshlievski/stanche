@@ -28,6 +28,11 @@ const userSchema = new Schema({
   },
   dob: {
     type: String,
+    required: true,
+  },
+  role: {
+    type: String,
+    required: true,
   },
 });
 
@@ -38,7 +43,8 @@ userSchema.statics.signup = async function (
   name,
   surname,
   gender,
-  dob
+  dob,
+  role
 ) {
   //validacija
   const exists = await this.findOne({ email });
@@ -57,6 +63,7 @@ userSchema.statics.signup = async function (
     surname,
     gender,
     dob,
+    role,
   });
 
   return user;

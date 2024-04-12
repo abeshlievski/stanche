@@ -9,6 +9,7 @@ export default function Register() {
   const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("student");
   const { signup, error, isLoading } = useSignup();
   function handleEmailChange(e) {
     setEmail(e.target.value);
@@ -30,7 +31,7 @@ export default function Register() {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await signup(name, surname, email, password, dob, gender);
+    await signup(name, surname, email, password, dob, gender, role);
   };
   return (
     <section id="register-page">

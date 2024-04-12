@@ -1,9 +1,10 @@
 import "../components/LogIn.css";
 import { useState } from "react";
 import { useLogin } from "../hooks/useLogin";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import buildingsImg from "../assets/buildings.jpg";
 export default function LogIn() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, error, isLoading } = useLogin();
@@ -16,6 +17,7 @@ export default function LogIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await login(email, password);
+    navigate("/ads");
   };
   return (
     <section id="log-in-page">

@@ -19,14 +19,30 @@ const getAd = async (req, res) => {
 };
 // create ad
 const createAd = async (req, res) => {
-  const { title, location, description, price, size } = req.body;
+  const {
+    title,
+    location,
+    address,
+    description,
+    cube,
+    price,
+    type,
+    quantity,
+    user_id,
+    createdBy,
+  } = req.body;
   try {
     const ad = await Ad.create({
       title,
       location,
+      address,
       description,
+      cube,
       price,
-      size,
+      type,
+      quantity,
+      user_id,
+      createdBy,
     });
     res.status(200).json(ad);
   } catch (err) {
