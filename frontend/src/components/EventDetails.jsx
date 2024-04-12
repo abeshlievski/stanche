@@ -33,17 +33,21 @@ const EventDetails = ({ event }) => {
           ))}
         </ul>
       </div>
-      <div id="card-desc-time">
-        <span>Објавено од : {event.createdBy}</span>
-        <p>
-          {formatDistanceToNow(new Date(event.createdAt), { addSuffix: true })}
-        </p>
+      <div id="card-desc-delete">
+        <div id="card-desc-time">
+          <span>Објавено од : {event.createdBy}</span>
+          <p>
+            {formatDistanceToNow(new Date(event.createdAt), {
+              addSuffix: true,
+            })}
+          </p>
+        </div>
+        {user_id === event.user_id && (
+          <span onClick={handleClick} className="delete-ad">
+            Избриши
+          </span>
+        )}
       </div>
-      {user_id === event.user_id && (
-        <span onClick={handleClick} className="delete-ad">
-          Избриши
-        </span>
-      )}
     </div>
   );
 };

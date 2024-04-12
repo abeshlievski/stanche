@@ -7,6 +7,11 @@
   align-items: center;
   justify-content: center;
 }
+#event-fields {
+  display: grid;
+  grid-template-rows: 1fr fr 2fr 1fr;
+  gap: 1em;
+}
 #form {
   display: flex;
   flex-direction: column;
@@ -19,73 +24,38 @@
   align-items: start;
   flex-direction: column;
 }
+
 .create-traits > div {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 10px;
 }
+
 #submit-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
 }
 
 @media only screen and (max-width: 541px) {
-  #display-ads {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    width: 100%;
-    padding: 0;
-  }
-
-  #ad {
-    border-style: solid none none none;
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr 3fr 1fr;
-    text-align: center;
-    height: auto;
-    margin: 0;
-    gap: 0;
-    padding: 10px;
-  }
-  .ad-details {
-    padding: 0;
-  }
-  .delete-ad {
-    cursor: pointer;
-    /* background-color: #e6eef2; */
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 279px) and (max-width: 700px) {
-  .item {
-    padding: 0 10px;
-  }
-  #form {
-    grid-template-columns: 1fr;
-    grid-template-rows: 5fr 1fr 1fr;
-  }
-  #image-preview {
-    display: none;
-  }
-  #submit-btn {
-    grid-area: 3 /1;
+  #event-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 700px) and (max-width: 974px) {
-  .item {
-    padding: 0 10px;
-  }
-
-  #image-preview {
-    width: 300px;
-    height: 300px;
+  #event-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
 }

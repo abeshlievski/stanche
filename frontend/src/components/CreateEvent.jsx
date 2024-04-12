@@ -57,7 +57,7 @@ export default function CreateAd() {
   return (
     <section id="create-event">
       <form action="" id="form" onSubmit={handleSubmit} noValidate>
-        <div id="item-fields">
+        <div id="event-fields">
           <div className="item item-title">
             <label htmlFor="title">Наслов</label>
             <input
@@ -67,8 +67,8 @@ export default function CreateAd() {
               required
             />
           </div>
-          <div className="item item-town">
-            <label htmlFor="location">Град</label>
+          <div className="item ">
+            <label htmlFor="location">Во кој град барате цимер?</label>
             <input
               type="text"
               value={location}
@@ -83,7 +83,7 @@ export default function CreateAd() {
                 <label htmlFor="sport">Спортист</label>
                 <input
                   type="checkbox"
-                  value="sport"
+                  value="Спортист"
                   onChange={handleChange}
                   name="sport"
                 />
@@ -93,7 +93,7 @@ export default function CreateAd() {
                 <label htmlFor="loveAnimals">Сакам животни</label>
                 <input
                   type="checkbox"
-                  value="loveAnimals"
+                  value="Сакам животни"
                   onChange={handleChange}
                   name="loveAnimals"
                 />
@@ -102,7 +102,7 @@ export default function CreateAd() {
                 <label htmlFor="books">Читам Книги</label>
                 <input
                   type="checkbox"
-                  value="books"
+                  value="Читам книги"
                   onChange={handleChange}
                   name="books"
                 />
@@ -111,7 +111,7 @@ export default function CreateAd() {
                 <label htmlFor="party">Сакам забави</label>
                 <input
                   type="checkbox"
-                  value="party"
+                  value="Сакам забави"
                   onChange={handleChange}
                   name="party"
                 />
@@ -120,7 +120,7 @@ export default function CreateAd() {
                 <label htmlFor="alchohol">"Алкохоличар"</label>
                 <input
                   type="checkbox"
-                  value="alchohol"
+                  value="Алкохоличар"
                   onChange={handleChange}
                   name="alchohol"
                 />
@@ -132,6 +132,15 @@ export default function CreateAd() {
                   value="privacy"
                   onChange={handleChange}
                   name="privacy"
+                />
+              </div>
+              <div>
+                <label htmlFor="cooking">Добро готвам</label>
+                <input
+                  type="checkbox"
+                  value="Добро готвам"
+                  onChange={handleChange}
+                  name="cooking"
                 />
               </div>
             </div>

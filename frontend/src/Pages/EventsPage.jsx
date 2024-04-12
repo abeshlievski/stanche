@@ -3,7 +3,7 @@ import { useEventsContext } from "../hooks/useEventsContext";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../hooks/useAuthContext";
 import EventDetails from "../components/EventDetails";
-
+import "../components/Events.css";
 const EventsPage = () => {
   const { user } = useAuthContext();
   const { events, dispatch } = useEventsContext();
@@ -23,7 +23,7 @@ const EventsPage = () => {
   }, [dispatch]);
 
   return (
-    <section id="ads-page">
+    <section id="events-page">
       <div id="filter">
         <button id="create-ad-btn">
           <Link
@@ -35,7 +35,7 @@ const EventsPage = () => {
           </Link>
         </button>
       </div>
-      <div id="display-ads">
+      <div id="display-events">
         {events &&
           events.map((event) => <EventDetails event={event} key={event._id} />)}
       </div>
