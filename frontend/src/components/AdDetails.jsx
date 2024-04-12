@@ -21,20 +21,26 @@ const AdDetails = ({ ad }) => {
   };
 
   return (
-    <div>
-      {user_id === ad.user_id && <span onClick={handleClick}>delete</span>}
-      <h1>{ad.title}</h1>
-      <img src={ad.img} alt="" />
-      <h3>
-        Локација: {ad.location} - Тип на објект:{" "}
-        {ad.type === "stan" ? "стан" : "куќа"}
-      </h3>
-      <h2>Повеќе информации:{ad.description}</h2>
-      <h2>
-        Квадратура:{ad.cube}cm2 - Цена:{ad.price}$/месечно
-      </h2>
-      <span>Објавено од : {ad.createdBy}</span>
-      <p>{formatDistanceToNow(new Date(ad.createdAt), { addSuffix: true })}</p>
+    <div id="ad">
+      <div>
+        <img src={ad.img} alt="" />
+      </div>
+      <div className="ad-details">
+        <h3>{ad.title}</h3>
+        <h5>Локација: {ad.location} </h5>
+        <h5> Тип на објект: {ad.type === "stan" ? "стан" : "куќа"}</h5>
+        <h5>Опис: {ad.description}</h5>
+        <h5>Квадратура: {ad.cube}cm2 </h5> <h5>Цена: {ad.price}$/месечно</h5>
+        <span>Објавено од: {ad.createdBy}</span>
+        <p>
+          {formatDistanceToNow(new Date(ad.createdAt), { addSuffix: true })}
+        </p>
+      </div>
+      {user_id === ad.user_id && (
+        <span onClick={handleClick} className="delete-ad">
+          Избриши
+        </span>
+      )}
     </div>
   );
 };

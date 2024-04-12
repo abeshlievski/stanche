@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useAdsContext } from "../hooks/useAdsContext";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../hooks/useAuthContext";
-
+import "../components/Ads.css";
 import AdDetails from "../components/AdDetails";
 const AdsPage = () => {
   const { user } = useAuthContext();
@@ -23,7 +23,9 @@ const AdsPage = () => {
   if (user.role === "izdavac") {
     content = (
       <button id="create-ad-btn">
-        <Link to={"/createad"}>Нов Оглас</Link>
+        <Link to={"/createad"} style={{ textDecoration: "none" }}>
+          Нов Оглас
+        </Link>
       </button>
     );
   } else {
@@ -36,7 +38,7 @@ const AdsPage = () => {
 
   return (
     <section id="ads-page">
-      {content}
+      <div id="content-btn">{content}</div>
       <div id="display-ads">
         {ads && ads.map((ad) => <AdDetails ad={ad} key={ad._id} />)}
       </div>

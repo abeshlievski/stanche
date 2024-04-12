@@ -1,6 +1,8 @@
 #create-ad {
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
+  max-height: auto;
+  margin-bottom: 2em;
 }
 #form {
   display: grid;
@@ -76,4 +78,63 @@ select {
   width: 400px;
   height: 400px;
   background-color: rgb(244, 179, 179);
+}
+
+@media only screen and (max-width: 541px) {
+  #display-ads {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  #ad {
+    border-style: solid none none none;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 3fr 1fr;
+    text-align: center;
+    height: auto;
+    margin: 0;
+    gap: 0;
+    padding: 10px;
+  }
+  .ad-details {
+    padding: 0;
+  }
+  .delete-ad {
+    cursor: pointer;
+    /* background-color: #e6eef2; */
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 279px) and (max-width: 700px) {
+  .item {
+    padding: 0 10px;
+  }
+  #form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 1fr 1fr;
+  }
+  #image-preview {
+    display: none;
+  }
+  #submit-btn {
+    grid-area: 3 /1;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 700px) and (max-width: 974px) {
+  .item {
+    padding: 0 10px;
+  }
+
+  #image-preview {
+    width: 300px;
+    height: 300px;
+  }
 }
