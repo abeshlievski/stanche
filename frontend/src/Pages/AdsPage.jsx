@@ -1,12 +1,16 @@
+import "../components/Ads.css";
 import { useEffect } from "react";
 import { useAdsContext } from "../hooks/useAdsContext";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../hooks/useAuthContext";
-import "../components/Ads.css";
+
 import AdDetails from "../components/AdDetails";
 const AdsPage = () => {
   const { user } = useAuthContext();
   const { ads, dispatch } = useAdsContext();
+  if (user.role === "student") {
+    return <div className="error">ЗАБРАНЕТ ПРИСТАП</div>;
+  }
 
   useEffect(() => {
     const fetchAds = async () => {
@@ -19,26 +23,14 @@ const AdsPage = () => {
 
     fetchAds();
   }, [dispatch]);
-  let content;
-  if (user.role === "izdavac") {
-    content = (
+
+  return (
+    <section id="ads-page">
       <button id="create-ad-btn">
         <Link to={"/createad"} style={{ textDecoration: "none" }}>
           Нов Оглас
         </Link>
       </button>
-    );
-  } else {
-    content = (
-      <div id="filter">
-        <button id="create-ad-btn">Барај цимер</button>
-      </div>
-    );
-  }
-
-  return (
-    <section id="ads-page">
-      <div id="content-btn">{content}</div>
       <div id="display-ads">
         {ads && ads.map((ad) => <AdDetails ad={ad} key={ad._id} />)}
       </div>

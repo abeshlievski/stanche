@@ -21,7 +21,7 @@ export default function NavBar() {
       <div id="navbar-menu">
         <ul>
           <NavBarMenu name="Дома" adress="/" />
-          <NavBarMenu name="Услуги" adress="/ads" />
+          <NavBarMenu name="Услуги" adress="/hub" />
 
           {user && (
             <div id="logged-in">

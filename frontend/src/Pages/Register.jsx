@@ -1,8 +1,12 @@
 import "../components/Register.css";
 import { useState } from "react";
 import buildingsImg from "../assets/buildings2.jpg";
+import { useNavigate } from "react-router-dom";
+
 import { useSignup } from "../hooks/useSignup";
 export default function Register() {
+  const navigate = useNavigate();
+
   const [dob, setDob] = useState("2000-01-01");
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
@@ -32,12 +36,13 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await signup(name, surname, email, password, dob, gender, role);
+    navigate("/hub");
   };
   return (
     <section id="register-page">
       <div id="register">
         <h1>Регистрација</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} noValidate>
           <div>
             <label htmlFor="name">
               <h5>Име</h5>

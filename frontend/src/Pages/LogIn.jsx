@@ -17,7 +17,7 @@ export default function LogIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await login(email, password);
-    navigate("/ads");
+    navigate("/hub");
   };
   return (
     <section id="log-in-page">

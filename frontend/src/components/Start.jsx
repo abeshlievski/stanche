@@ -9,7 +9,7 @@ export default function Start() {
           <h1>Подготвени да започнете со барање?</h1>
         </div>
         <button>
-          <Link to={"/ads"} className="link-to">
+          <Link to={"/hub"} className="link-to">
             Истражи
           </Link>
         </button>
