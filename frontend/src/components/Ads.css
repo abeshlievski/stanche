@@ -47,10 +47,6 @@
   border: 3px solid #146c94;
   font-weight: 700;
 }
-.delete-ad {
-  cursor: pointer;
-  /* background-color: #e6eef2; */
-}
 
 @media only screen and (max-width: 541px) {
   #display-ads {

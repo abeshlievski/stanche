@@ -1,0 +1,37 @@
+#hub {
+  width: 100%;
+  min-height: 90vh;
+  max-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3em;
+}
+#hub > div {
+  display: flex;
+  gap: 3em;
+}
+#hub-card {
+  width: 600px;
+  height: 300px;
+  border: 3px solid #146c94;
+  border-radius: 7%;
+  padding: 2em;
+  display: grid;
+  grid-template-rows: 10fr 1fr;
+}
+
+#hub-card:hover {
+  border: 4px solid #146c94;
+}
+#create-hub-btn {
+  width: 200px;
+  height: 50px;
+  background-color: #146c94;
+  border: 0;
+  font-weight: 500;
+}
+#create-hub-btn:hover {
+  background-color: #0f5271;
+}

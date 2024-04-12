@@ -26,7 +26,13 @@ const EventsPage = () => {
     <section id="ads-page">
       <div id="filter">
         <button id="create-ad-btn">
-          <Link to={"/createevent"}>Барај Цимер</Link>
+          <Link
+            to={"/createevent"}
+            className="link-deco"
+            style={{ color: "#146c94" }}
+          >
+            Барај Цимер
+          </Link>
         </button>
       </div>
       <div id="display-ads">

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEventsContext } from "../hooks/useEventsContext";
 import { useAuthContext } from "../hooks/useAuthContext";
+import "./CreateEvent.css";
 
 export default function CreateAd() {
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ export default function CreateAd() {
   };
 
   return (
-    <section id="create-ad">
+    <section id="create-event">
       <form action="" id="form" onSubmit={handleSubmit} noValidate>
         <div id="item-fields">
           <div className="item item-title">
@@ -75,29 +76,65 @@ export default function CreateAd() {
               required
             />
           </div>
-          <div className="">
-            <h6>Кој тагови најмногу ве опишуваат?</h6>
-            <label htmlFor="sport">Sport</label>
-            <input
-              type="checkbox"
-              value="sport"
-              onChange={handleChange}
-              name="sport"
-            />
-            <label htmlFor="comp">Computer</label>
-            <input
-              type="checkbox"
-              value="computers"
-              onChange={handleChange}
-              name="comp"
-            />
-            <label htmlFor="books">Books</label>
-            <input
-              type="checkbox"
-              value="books"
-              onChange={handleChange}
-              name="books"
-            />
+          <div className="create-traits">
+            <h6>Кој карактеристики најмногу ве опишуваат?</h6>
+            <div>
+              <div>
+                <label htmlFor="sport">Спортист</label>
+                <input
+                  type="checkbox"
+                  value="sport"
+                  onChange={handleChange}
+                  name="sport"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="loveAnimals">Сакам животни</label>
+                <input
+                  type="checkbox"
+                  value="loveAnimals"
+                  onChange={handleChange}
+                  name="loveAnimals"
+                />
+              </div>
+              <div>
+                <label htmlFor="books">Читам Книги</label>
+                <input
+                  type="checkbox"
+                  value="books"
+                  onChange={handleChange}
+                  name="books"
+                />
+              </div>
+              <div>
+                <label htmlFor="party">Сакам забави</label>
+                <input
+                  type="checkbox"
+                  value="party"
+                  onChange={handleChange}
+                  name="party"
+                />
+              </div>
+              <div>
+                <label htmlFor="alchohol">"Алкохоличар"</label>
+                <input
+                  type="checkbox"
+                  value="alchohol"
+                  onChange={handleChange}
+                  name="alchohol"
+                />
+              </div>
+              <div>
+                <label htmlFor="privacy">Сакам Приватност</label>
+                <input
+                  type="checkbox"
+                  value="privacy"
+                  onChange={handleChange}
+                  name="privacy"
+                />
+              </div>
+            </div>
           </div>
           <div className="item item-description">
             <label htmlFor="description">Повеќе информации за вас</label>

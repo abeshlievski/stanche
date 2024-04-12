@@ -6,6 +6,14 @@ body {
   font-size: 16px;
   background-color: #f6f1f1;
 }
+.link-deco {
+  text-decoration: none;
+  color: white;
+}
+.delete-ad {
+  cursor: pointer;
+  /* background-color: #e6eef2; */
+}
 .error {
   font-size: 100px;
   padding-left: 25%;
