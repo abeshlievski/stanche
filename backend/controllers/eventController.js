@@ -19,13 +19,15 @@ const getEvent = async (req, res) => {
 };
 // create ad
 const createEvent = async (req, res) => {
-  const { title, location, description, user_id, createdBy, tags } = req.body;
+  const { title, location, description, user_id, user_email, createdBy, tags } =
+    req.body;
   try {
     const event = await Event.create({
       title,
       location,
       description,
       user_id,
+      user_email,
       createdBy,
       tags,
     });

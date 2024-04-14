@@ -20,6 +20,10 @@ const eventSchema = new Schema(
       type: String,
       required: true,
     },
+    user_email: {
+      type: String,
+      required: true,
+    },
     createdBy: {
       type: String,
       required: true,

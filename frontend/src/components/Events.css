@@ -2,10 +2,10 @@
   margin-bottom: 2em;
   padding: 2dvh;
   width: 400px;
-  height: 300px;
+  height: auto;
   border: 1px solid #146c94;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
   /* border-style: solid none none none; */
   text-align: start;
 }

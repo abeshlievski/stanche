@@ -1,6 +1,8 @@
+import "./Events.css";
 import { useEventsContext } from "../hooks/useEventsContext";
 import { useAuthContext } from "../hooks/useAuthContext";
-import "./Events.css";
+import { nanoid } from "nanoid";
+
 // date fns
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
@@ -29,7 +31,7 @@ const EventDetails = ({ event }) => {
         <h5>Карактеристики:</h5>
         <ul id="card-traits">
           {event.tags.map((tag) => (
-            <li>{tag}</li>
+            <li key={nanoid()}>{tag}</li>
           ))}
         </ul>
       </div>

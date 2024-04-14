@@ -1,9 +1,10 @@
+import "../components/CreateEvent.css";
 import "../components/CreateAd.css";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEventsContext } from "../hooks/useEventsContext";
 import { useAuthContext } from "../hooks/useAuthContext";
-import "./CreateEvent.css";
 
 export default function CreateAd() {
   const navigate = useNavigate();
@@ -28,11 +29,13 @@ export default function CreateAd() {
     e.preventDefault();
     const user_id = user._id;
     const createdBy = user.name + " " + user.surname;
+    const user_email = user.email;
     const event = {
       title,
       location,
       description,
       user_id,
+      user_email,
       createdBy,
       tags,
     };
@@ -56,6 +59,7 @@ export default function CreateAd() {
 
   return (
     <section id="create-event">
+      <h1>Креирај оглас:</h1>
       <form action="" id="form" onSubmit={handleSubmit} noValidate>
         <div id="event-fields">
           <div className="item item-title">

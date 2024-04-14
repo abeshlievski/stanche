@@ -30,6 +30,7 @@ const createAd = async (req, res) => {
     quantity,
     user_id,
     createdBy,
+    user_email,
   } = req.body;
   try {
     const ad = await Ad.create({
@@ -43,6 +44,7 @@ const createAd = async (req, res) => {
       quantity,
       user_id,
       createdBy,
+      user_email,
     });
     res.status(200).json(ad);
   } catch (err) {

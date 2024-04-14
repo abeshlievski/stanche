@@ -18,7 +18,7 @@
   margin-bottom: 2em;
   padding: 10px;
   width: 750px;
-  height: 280px;
+  height: auto;
   background-color: transparent;
   display: grid;
   grid-template-columns: 3fr 8fr 1fr;

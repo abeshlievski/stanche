@@ -22,6 +22,7 @@ export default function CreateAd() {
     e.preventDefault();
     const user_id = user._id;
     const createdBy = user.name + " " + user.surname;
+    const user_email = user.email;
     const ad = {
       title,
       location,
@@ -33,6 +34,7 @@ export default function CreateAd() {
       type,
       user_id,
       createdBy,
+      user_email,
     };
     console.log(ad);
     const response = await fetch("/api/ads", {
@@ -54,6 +56,7 @@ export default function CreateAd() {
 
   return (
     <section id="create-ad">
+      <h1>Креирај оглас:</h1>
       <form action="" id="form" onSubmit={handleSubmit} noValidate>
         <div id="item-fields">
           <div className="item item-title">
@@ -132,10 +135,6 @@ export default function CreateAd() {
               <option value="kukja">Куќа</option>
             </select>
           </div>
-        </div>
-        <div id="inserted-image">
-          <input type="file" accept="image/*" />
-          <div id="image-preview"></div>
         </div>
         <div id="submit-btn">
           <button className="submit-form">Продолжи</button>
